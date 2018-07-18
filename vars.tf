@@ -3,10 +3,22 @@ variable "host_domain" {
   #default = "gregmilligaphotography.com"
 }
 
-variable "public_ip" {
+variable "record_type" {
   type = "string"
-  #default = "52.38.121.220"
 }
+
+variable "ttl" {
+  type = "string"
+}
+
+variable "end_point" {
+  type = "string"
+}
+
+# variable "public_ip" {
+#   type = "string"
+#   #default = "52.38.121.220"
+# }
 
 # variable "zone" {
 #   type = "string"

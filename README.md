@@ -5,11 +5,13 @@ server (NS) records. Create a host zone and A records for both domain and www.
 
 #### r53-web-host
 * inputs:
-  * host_domain:
-  * public_ip: IP used for this
-  * zone: For tags
+  * host_domain: Name of site
+  * record_type: 'CNAME' or 'A'
+  * ttl: Time to Live
+  * end_point: Public IP or DNS
   * environment: For tags
   * application: For tags
+  * zone: For tags
 
 * outputs:
   * name_servers
@@ -18,11 +20,15 @@ server (NS) records. Create a host zone and A records for both domain and www.
 
 module "r53-web-host" {
   source = "github.com/xybersolve/terraform_r53_web_host_module"
+
   host_domain = "${var.host_domain}"
-  public_ip = "${var.public_ip}"
-  zone = "${var.zone}"
+  record_type = "${var.record_type}"
+  ttl = "${var.ttl}"
+  end_point = "${var.public_dns}"
+
   environment = "${var.environment}"
   application = "${var.application}"
+  zone = "${var.zone}"
 }
 
 ```
