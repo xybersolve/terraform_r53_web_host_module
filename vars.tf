@@ -4,6 +4,7 @@ variable "host_domain" {
 }
 
 variable "record_type" {
+  default = "A"
   type = "string"
 }
 
@@ -11,11 +12,7 @@ variable "ttl" {
   type = "string"
 }
 
-variable "public_ip" {
-  type = "string"
-}
-
-variable "public_dns" {
+variable "endpoint" {
   type = "string"
 }
 
@@ -31,6 +28,10 @@ variable "zone" {
   type = "string"
 }
 
-# variable "endpoint" {
+# variable "public_ip" {
+#   type = "string"
+# }
+#
+# variable "public_dns" {
 #   type = "string"
 # }
