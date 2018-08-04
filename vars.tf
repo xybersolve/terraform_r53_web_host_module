@@ -11,18 +11,13 @@ variable "ttl" {
   type = "string"
 }
 
-variable "end_point" {
+variable "public_ip" {
   type = "string"
 }
 
-# variable "public_ip" {
-#   type = "string"
-#   #default = "52.38.121.220"
-# }
-
-# variable "zone" {
-#   type = "string"
-# }
+variable "public_dns" {
+  type = "string"
+}
 
 variable "application" {
   type = "string"
@@ -35,3 +30,7 @@ variable "environment" {
 variable "zone" {
   type = "string"
 }
+
+# variable "endpoint" {
+#   type = "string"
+# }

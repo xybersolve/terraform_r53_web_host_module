@@ -3,6 +3,8 @@
 > Terraform module to orchestrate simple web host zone, including name
 server (NS) records. Create a host zone and A records for both domain and www.
 
+Notes: CNAME can be used for subdomain, but is not legal at root level.  
+
 #### r53-web-host
 * inputs:
   * host_domain: Name of site
